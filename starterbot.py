@@ -3,7 +3,7 @@
 
 #don't forget to set the environmental variable SLACK_BOT_TOKEN using
 #export SLACK_BOT_TOKEN='xoxb-302972529057-XQvFAM4cU0jt0Tw9r6q18upM'
-#or hardcode 
+#or hardcode
 
 import os
 import time
@@ -25,7 +25,7 @@ weather_key = 'a3d2848b016e5b1f376098a55f215b55'
 RTM_READ_DELAY = 1 # 1 second delay between reading from RTM
 COMMANDS = ['do', 'weather']
 
-weather_data = json.load(open('city.list.json'))
+#weather_data = json.load(open('city.list.json'))
 #pprint(weather_data[1]['name'])
 
 #for i in weather_data:
@@ -46,7 +46,7 @@ def parse_bot_commands(slack_events):
     for event in slack_events:
     	#uncomment line below to debug print
     	#print json.dumps(event, indent = 2, sort_keys = True)
-        
+
         if event["type"] == "message" and not "subtype" in event:
             user_id, message = parse_direct_mention(event["text"])
             #uncomment line below to debug print
@@ -89,7 +89,7 @@ def handle_command(command, channel):
 
 
     elif "?" in command:
-        response = command 
+        response = command
 
     else:
         response = "Sure...write some more code then I can do that!"
@@ -110,7 +110,7 @@ def get_weather(city):
     #for i in weather_data:
     #    if (i['name']).lower() == city.lower():
     #        pprint(_id)
-    #        _id = i['id']    
+    #        _id = i['id']
 
     pprint(_id)
 
@@ -130,7 +130,7 @@ def get_weather(city):
 
 
 if __name__ == "__main__":
-	# avm: connect is designed for larger teams, 
+	# avm: connect is designed for larger teams,
 	# see https://slackapi.github.io/python-slackclient/real_time_messaging.html
 	# for details
     if slack_client.rtm_connect(with_team_state=False):
