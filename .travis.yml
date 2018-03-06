@@ -10,3 +10,13 @@ script:
 - coverage run ./ci_play/test.py
 after_success:
 - codecov --token=8e740575-ca2c-4017-adfb-4dcd5471c326
+deploy:
+  provider: s3
+  access_key_id: AKIAJPECOI3Z72YXP2OQ
+  secret_access_key:
+    secure: aI2CYFBS4MU205kh0dBGKcY1SedoHswINJRgo2p4vjfkH4pocGIVRWaz/e1XPOngBefkkQEQ/R3UtszFA+UDhBu94BBY+Kx2Vej6ak/Q9vAdeB9FU9nzgMN2n0f4N6r83c3Ve3Szadfw5C0/LHqssY99p/IdZ51xXWZGqVjiwX7+goIpPIIGa50Oo8PKrX/a+h4Zo01AcHRjr0UGjeVRMFFRU5mZxOXh288Ccw/6pquFrN/6whvaUzqzrRkp9ie4djYg9MVhiPQUhiTy9Va6+MlO0m0k1vi5PXVZqNVDl5UoyNkIz0iVlBhaXs2Hz959yCqSOat95FpJRdMHM9EuWl+ONsECY8utMn49RauHmbebgRK2DOK9OUr+UeU9h7BQLFt4zzveb0S0H88c68dI0fZCJvr7zIgpW4ZKsXpp1nEC8v9q7E9c1jKYgMucFoM48ztpGdirDQZ2lyJWcyqbZblkmaXtNyTcU3c7qOreFZBWwppwqG+cNsQuEUl23C7NKQwmGF/vCvU7Am4HhUolRHF+hYhPBBo+NxNVGdf/B5VKhOvSBrCSDnAKaUkzwi/duvaTg0/oqQ3SFj7/LxEiCuRs0aXJHqB2tp47xgvQs+YkryKInGlVjr8LbkK4+/wOisRQ28qDwldGNK9Ft47mnDLRAPgdEA+vvKiW7K0JY0k=
+  bucket: arn:aws:s3:::agaws
+  local-dir: index.html
+  acl: public_read
+  on:
+    repo: CPS847-midterm/Assignment-1
