@@ -15,3 +15,7 @@ install:
 script:
   - python -m unittest discover -v ./ci_play/ # command to run unit test
   - coverage run ./ci_play/test.py # command to run code coverage
+
+#can do additional things, say send out reports, which we will discuss next tim
+ after_success:
+  - codecov --token=8e740575-ca2c-4017-adfb-4dcd5471c326  #upload coverage report to codecov.io
