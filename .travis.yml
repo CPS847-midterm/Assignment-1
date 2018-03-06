@@ -11,11 +11,8 @@ script:
 after_success:
 - codecov --token=8e740575-ca2c-4017-adfb-4dcd5471c326
 deploy:
+deploy:
   provider: s3
   access_key_id: AKIAJPECOI3Z72YXP2OQ
-  secret_access_key:
-    secure: F3WfZo0HSKyuwi+5oW7kk86aumqV0XmcqvIkQTZgUYqTtJm8p8xHiqQYScZqdF2Vvg/nyxgINb/ORFD68HeeDHRcslMt+vevzOcsyZjVTakRqNs2nOvj+G+J/MOTiAYvX2397xD14dcq39VEnRf9c4poZMvUr6v/fzTHSkbAPOtUrCqel2dq5jtTemVveRKEKpIjA4KzMt1SXV0p+47shyJ6JfAPwcawB4PyFA0I0DBhGMfOmPmtJo9la+guzZOBxWapO4LoGDqb5hA2X6F9llb6xYgrAVPd0xzPzFN1OEP4abXv78dFS/tmgLCNRnWTcT7YbWjrtp6uWbLcv+S8vbLabn/bXKLhpF723jaOp1s4HU8/ECAaENo3FEVI/cNOoswYBrJFRJZhZaCPmE/WfyD2tPh1LnDBJlBBnRZH4xm6eFn2IwNDjIBcFYuu2m2lzNZD7cXdbsjKw15AYazBAmppXux8k/Qal+IUuy9REj7Yx0c8Pfb27kAk+s29eshr7Aqxi/LlHfAaw/fjB281imrouE8gJC66AxxhBY9L3ULTHCIlVpBiusEIGZeGCNqSEma3TrQYaxuF4UUURMz0E/GJSl+LUf34SS7meNdo3lKc/aUcIGsYqNDvj99gf4WacfW8oVOUQXlvNmao8BIYTaMM0JArbGqpMfgK7/WdG/U=
+  secret_access_key: 98sD8l6xSwwx/WrjaJvOD6aZ0il1euD13z8+KwNl
   bucket: www.agaws.com
-  acl: public_read
-  on:
-    repo: CPS847-midterm/Assignment-1
